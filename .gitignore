@@ -1,0 +1,7 @@
+
+10/compiling_error.txt
+*.cbp
+*.layout
+*.depend
+*.exe
+*.o
