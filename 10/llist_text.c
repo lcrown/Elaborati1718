@@ -3,6 +3,7 @@ LINKED LISTS
 ******************************/
 #include "text.h"
 #include <stdlib.h>
+#include <ctype.h>
 
 struct line {
 	char c;
@@ -73,7 +74,7 @@ void single_line(struct text *T) {
         while (curr != NULL) {
             head = get_head(T);
             tail = get_tail(T);
-            if (curr->c == ' ' || curr->c == '\n') {
+            if (isspace(curr->c)) {
                 tmp = curr;
                 if (curr == head)
                     T->line = curr->next;
